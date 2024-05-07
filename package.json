@@ -1,0 +1,14 @@
+{
+  "name": "alab-308a.3.3.1-promises-async-await",
+  "version": "1.0.0",
+  "description": "Working with Promises and Async",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rodney St. Cloud",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
