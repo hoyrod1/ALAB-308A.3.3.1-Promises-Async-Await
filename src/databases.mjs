@@ -1,5 +1,6 @@
+//================================================================================//
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
+//================================================================================//
 /**
  * Accepts a user id value and returns a string containing
  * the database that user's information can be found in.
@@ -17,7 +18,7 @@ export async function central(id) {
 
   return db;
 }
-
+//================================================================================//
 /**
  * Accepts a user id value and returns an object containing
  * username, website, and company data.
@@ -37,6 +38,7 @@ export async function db1(id) {
     company: json.company,
   };
 }
+//================================================================================//
 /**
  * Accepts a user id value and returns an object containing
  * username, website, and company data.
@@ -56,6 +58,7 @@ export async function db2(id) {
     company: json.company,
   };
 }
+//================================================================================//
 /**
  * Accepts a user id value and returns an object containing
  * username, website, and company data.
@@ -75,7 +78,7 @@ export async function db3(id) {
     company: json.company,
   };
 }
-
+//================================================================================//
 /**
  * Accepts a user id value and returns an object containing
  * name, email, address, and phone data.
@@ -96,3 +99,4 @@ export async function vault(id) {
     phone: json.phone,
   };
 }
+//================================================================================//
