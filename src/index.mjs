@@ -13,30 +13,14 @@ async function getUserData(id) {
 
   //--------------------------------------------------------------------------//
   let dbInUse = await central(id);
-  // console.log(dbInUse);
-  // dbs[dbInUse](id).then((x) => {
-  //   console.log(x);
-  // });
-
-  // const userVaultInfo = await vault(id);
-  // console.log(userVaultInfo);
   //--------------------------------------------------------------------------//
-  Promise.all([vault(id), dbs[dbInUse](id)])
+
+  return Promise.all([vault(id), dbs[dbInUse](id)])
     .then((x) => {
       console.log(
         "========== Retrieve users data from the vault & dbs object using 'id' =========="
       );
-      // return {
-      //   id: id,
-      //   name: x[0].name,
-      //   username: x[1].username,
-      //   email: x[0].email,
-      //   address: x[0].address,
-      //   phone: x[0].phone,
-      //   website: x[1].website,
-      //   company: x[1].company,
-      // };
-      console.log({
+      return {
         id: id,
         name: x[0].name,
         username: x[1].username,
@@ -45,14 +29,19 @@ async function getUserData(id) {
         phone: x[0].phone,
         website: x[1].website,
         company: x[1].company,
-      });
+      };
     })
     .catch((err) => {
       console.log(err);
     });
+  // return result;
 }
 //---------------------------------------------------------------------------//
 const userData = getUserData(8);
+
+userData.then((data) => {
+  console.log(data);
+});
 //---------------------------------------------------------------------------//
 
 //============================== Practice code ==============================//
