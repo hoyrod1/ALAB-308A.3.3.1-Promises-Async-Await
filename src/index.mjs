@@ -52,8 +52,7 @@ async function getUserData(id) {
     });
 }
 //---------------------------------------------------------------------------//
-const userData = getUserData(1);
-// console.log(userData.then((user) => console.log(user)));
+const userData = getUserData(8);
 //---------------------------------------------------------------------------//
 
 //============================== Practice code ==============================//
